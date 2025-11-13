@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Power Solutions | Professional Generator Services in Lahore & Pakistan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(102,126,234,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .generator-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        
+        .generator-image img {
+            transition: transform 0.5s ease;
+        }
+        
+        .generator-image:hover img {
+            transform: scale(1.1);
+        }
+        
+        .stats-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-padding {
+            padding: 6rem 0;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .brand-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            border-left: 2px solid #e0e0e0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: #667eea;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Top Bar -->
+    <div class="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-2">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-center text-sm">
+                <div class="flex items-center space-x-6">
+                    <a href="tel:+923044282752" class="flex items-center space-x-2 hover:text-purple-200 transition">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 304 4282752</span>
+                    </a>
+                    <a href="mailto:info@elitepowersolutions.pk" class="flex items-center space-x-2 hover:text-purple-200 transition">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@elitepowersolutions.pk</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="flex items-center space-x-2">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Emergency Service Available</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center">
+                        <i class="fas fa-bolt text-white text-3xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text">Elite Power Solutions</h1>
+                        <p class="text-xs text-gray-600">Professional Generator Services Since 2009</p>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Services</a>
+                    <a href="#industries" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Industries</a>
+                    <a href="#generators" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Generators</a>
+                    <a href="#why-us" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Why Us</a>
+                    <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">
+                        Get a Quote
+                    </a>
+                </div>
+                
+                <button class="lg:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-in-left relative z-10">
+                    <div class="inline-flex items-center bg-white shadow-lg px-5 py-3 rounded-full mb-6">
+                        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-3"></div>
+                        <span class="font-semibold text-gray-700">Trusted by 500+ Businesses in Pakistan</span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-black text-gray-900 leading-tight mb-6">
+                        Reliable Power Solutions for Your Business
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                        Complete generator installation, maintenance, and repair services for industrial and commercial clients. 
+                        Specializing in 50 kVA to 250 kVA generators with expert AVR configuration and electrical systems.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8 bg-white p-6 rounded-2xl shadow-lg">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold gradient-text">15+</p>
+                            <p class="text-sm text-gray-600">Years Experience</p>
+                        </div>
+                        <div class="text-center border-x border-gray-200">
+                            <p class="text-3xl font-bold gradient-text">500+</p>
+                            <p class="text-sm text-gray-600">Projects Completed</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold gradient-text">24/7</p>
+                            <p class="text-sm text-gray-600">Support Available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center">
+                            Request Service <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="tel:+923044282752" class="bg-white text-gray-800 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-lg hover:shadow-xl transition border-2 border-gray-200">
+                            <i class="fas fa-phone mr-2 text-purple-600"></i> Emergency Call
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative animate-slide-in-right">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="generator-image animate-float">
+                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=400&fit=crop" 
+                                 alt="Industrial Generator Installation" 
+                                 class="w-full h-72 object-cover rounded-2xl shadow-2xl">
+                        </div>
+                        <div class="generator-image animate-float delay-200 mt-8">
+                            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&h=400&fit=crop" 
+                                 alt="Generator Maintenance Service" 
+                                 class="w-full h-72 object-cover rounded-2xl shadow-2xl">
+                        </div>
+                        <div class="generator-image animate-float delay-300 -mt-8">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" 
+                                 alt="AVR Configuration Service" 
+                                 class="w-full h-72 object-cover rounded-2xl shadow-2xl">
+                        </div>
+                        <div class="generator-image animate-float delay-400">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" 
+                                 alt="Generator Testing" 
+                                 class="w-full h-72 object-cover rounded-2xl shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">Our Services</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 mt-2">
+                    Comprehensive Generator Solutions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From installation to maintenance, we provide end-to-end generator services tailored to your power requirements
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 card-hover border-2 border-transparent hover:border-purple-200">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Generator Installation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Professional installation services for industrial and commercial generators with complete system integration.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Site assessment & planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Complete electrical wiring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Control panel setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Load bank testing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-bold inline-flex items-center hover:text-purple-700">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 card-hover border-2 border-transparent hover:border-purple-200">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Maintenance & Repair</h3>
+                    <p class="text-gray-600 mb-6">
+                        Preventive maintenance programs and emergency repair services to ensure optimal generator performance.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Scheduled maintenance plans</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Emergency breakdown service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Parts replacement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Performance diagnostics</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-bold inline-flex items-center hover:text-purple-700">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 card-hover border-2 border-transparent hover:border-purple-200">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AVR Configuration</h3>
+                    <p class="text-gray-600 mb-6">
+                        Expert AVR (Automatic Voltage Regulator) setup and calibration for stable voltage output.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">AVR installation & replacement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Voltage regulation tuning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">System calibration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Protection system setup</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-bold inline-flex items-center hover:text-purple-700">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 card-hover border-2 border-transparent hover:border-purple-200">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Electrical Wiring</h3>
+                    <p class="text-gray-600 mb-6">
+                        Complete electrical wiring solutions for generator systems with safety compliance.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Power distribution setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Circuit breaker installation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Grounding systems</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Safety compliance checks</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-bold inline-flex items-center hover:text-purple-700">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 card-hover border-2 border-transparent hover:border-purple-200">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AMC Contracts</h3>
+                    <p class="text-gray-600 mb-6">
+                        Annual Maintenance Contracts with scheduled servicing and priority support.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Regular servicing schedules</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Priority emergency response</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Discounted parts & labor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Performance reports</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-bold inline-flex items-center hover:text-purple-700">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 card-hover border-2 border-transparent hover:border-purple-200">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Load Testing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Comprehensive load bank testing to verify generator capacity and performance.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Full capacity testing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Performance verification</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Efficiency analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Compliance certification</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-bold inline-flex items-center hover:text-purple-700">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section id="industries" class="section-padding bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">Industries</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 mt-2">
+                    Powering Diverse Industries
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Trusted generator solutions across multiple sectors in Pakistan
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-industry text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Manufacturing</h3>
+                    <p class="text-gray-600">Continuous power for production lines and industrial equipment</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hospital text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Healthcare</h3>
+                    <p class="text-gray-600">Reliable backup power for hospitals and medical facilities</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-building text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Commercial</h3>
+                    <p class="text-gray-600">Uninterrupted power for offices, malls, and retail spaces</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hotel text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Hospitality</h3>
+                    <p class="text-gray-600">Seamless power solutions for hotels and restaurants</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Educational</h3>
+                    <p class="text-gray-600">Stable power for schools, colleges, and universities</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Residential</h3>
+                    <p class="text-gray-600">Home backup power solutions for housing societies</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Telecom</h3>
+                    <p class="text-gray-600">Critical power for telecom towers and data centers</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center card-hover">
+                    <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tint text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Water Treatment</h3>
+                    <p class="text-gray-600">Continuous operation for water and sewage facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Capacity Section -->
+    <section id="generators" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">Capacity Range</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 mt-2">
+                    50 kVA to 250 kVA Generators
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive service and support for a wide range of generator capacities
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl p-8 text-white card-hover">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 mb-4">
+                            <p class="text-4xl font-black">50-100</p>
+                            <p class="text-lg font-semibold">kVA</p>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Small to Medium Capacity</h3>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Ideal For:</p>
+                                <p class="text-white/80">Small offices, retail shops, clinics</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Power Load:</p>
+                                <p class="text-white/80">40-80 kW continuous power</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Applications:</p>
+                                <p class="text-white/80">Essential equipment backup</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/20 pt-6">
+                        <p class="text-sm text-white/80">Popular models: Perkins, Cummins, FG Wilson</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 text-white card-hover transform lg:-translate-y-4">
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-purple-900 px-4 py-2 rounded-full text-sm font-bold">
+                        Most Popular
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 mb-4">
+                            <p class="text-4xl font-black">100-175</p>
+                            <p class="text-lg font-semibold">kVA</p>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Medium to Large Capacity</h3>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Ideal For:</p>
+                                <p class="text-white/80">Factories, hospitals, commercial buildings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Power Load:</p>
+                                <p class="text-white/80">80-140 kW continuous power</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Applications:</p>
+                                <p class="text-white/80">Full facility backup power</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/20 pt-6">
+                        <p class="text-sm text-white/80">Popular models: Caterpillar, Cummins, Volvo Penta</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-8 text-white card-hover">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 mb-4">
+                            <p class="text-4xl font-black">175-250</p>
+                            <p class="text-lg font-semibold">kVA</p>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Large Industrial Capacity</h3>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Ideal For:</p>
+                                <p class="text-white/80">Large industries, data centers, plants</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Power Load:</p>
+                                <p class="text-white/80">140-200 kW continuous power</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Applications:</p>
+                                <p class="text-white/80">Heavy industrial operations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/20 pt-6">
+                        <p class="text-sm text-white/80">Popular models: Caterpillar, MTU, Cummins</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generator Brands -->
+            <div class="bg-gray-100 rounded-3xl p-12">
+                <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Authorized Service for Leading Brands</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                    <div class="text-center">
+                        <div class="bg-white rounded-xl p-4 brand-logo h-24 flex items-center justify-center">
+                            <p class="font-bold text-gray-800 text-lg">Cummins</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-xl p-4 brand-logo h-24 flex items-center justify-center">
+                            <p class="font-bold text-gray-800 text-lg">Caterpillar</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-xl p-4 brand-logo h-24 flex items-center justify-center">
+                            <p class="font-bold text-gray-800 text-lg">Perkins</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-xl p-4 brand-logo h-24 flex items-center justify-center">
+                            <p class="font-bold text-gray-800 text-lg">FG Wilson</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-xl p-4 brand-logo h-24 flex items-center justify-center">
+                            <p class="font-bold text-gray-800 text-lg">Volvo Penta</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-xl p-4 brand-logo h-24 flex items-center justify-center">
+                            <p class="font-bold text-gray-800 text-lg">Kohler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section-padding bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">Why Choose Us</span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 mt-2">
+                        Your Trusted Power Partner in Pakistan
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        With over 15 years of experience and 500+ successful projects, we've established ourselves 
+                        as Lahore's leading generator service provider. Our commitment to excellence and customer 
+                        satisfaction sets us apart.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-award text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">15+ Years of Expertise</h4>
+                                <p class="text-gray-600">Extensive experience in generator installation, maintenance, and repair across various industries.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user-shield text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Certified Professionals</h4>
+                                <p class="text-gray-600">Highly trained technicians with DAE certification and specialized training from Heavy Mechanical Complex.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">24/7 Emergency Support</h4>
+                                <p class="text-gray-600">Round-the-clock availability for emergency breakdowns and urgent repair requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-hand-holding-usd text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Competitive Pricing</h4>
+                                <p class="text-gray-600">Fair and transparent pricing with no hidden charges. Get the best value for your investment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center card-hover">
+                                <div class="stats-number">500+</div>
+                                <p class="text-gray-600 font-semibold">Projects Completed</p>
+                            </div>
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center card-hover">
+                                <div class="stats-number">100%</div>
+                                <p class="text-gray-600 font-semibold">Client Satisfaction</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6 mt-12">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center card-hover">
+                                <div class="stats-number">15+</div>
+                                <p class="text-gray-600 font-semibold">Years Experience</p>
+                            </div>
+                            <div class="bg-white rounded-2xl p-8 shadow-xl text-center card-hover">
+                                <div class="stats-number">24/7</div>
+                                <p class="text-gray-600 font-semibold">Support Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">FAQ</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 mt-2">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Everything you need to know about our generator services
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition" onclick="toggleAccordion(this)">
+                        <h3 class="text-xl font-bold text-gray-900">What generator capacity do I need for my business?</h3>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">The required generator capacity depends on your total power load. For small offices (10-20 kW), a 50-75 kVA generator is suitable. Medium businesses (30-50 kW) need 100-150 kVA, while large facilities (60-80 kW) require 175-250 kVA generators. We provide free site assessments to determine the exact capacity you need.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition" onclick="toggleAccordion(this)">
+                        <h3 class="text-xl font-bold text-gray-900">How often should generators be serviced?</h3>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">We recommend servicing generators every 250-500 running hours or every 6 months, whichever comes first. For generators used frequently, quarterly maintenance is ideal. Our AMC packages include scheduled servicing, oil changes, filter replacements, and comprehensive inspections to ensure optimal performance.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition" onclick="toggleAccordion(this)">
+                        <h3 class="text-xl font-bold text-gray-900">Do you provide emergency repair services?</h3>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">Yes! We offer 24/7 emergency repair services throughout Lahore and surrounding areas. Our response time is typically 2-4 hours for emergency calls. We maintain a well-stocked inventory of common spare parts to ensure quick repairs and minimal downtime for your business.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition" onclick="toggleAccordion(this)">
+                        <h3 class="text-xl font-bold text-gray-900">What is AVR configuration and why is it important?</h3>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">AVR (Automatic Voltage Regulator) is a critical component that maintains stable voltage output from your generator. Proper AVR configuration prevents voltage fluctuations that can damage sensitive equipment. We specialize in AVR installation, calibration, and troubleshooting to ensure your generator delivers consistent, clean power.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition" onclick="toggleAccordion(this)">
+                        <h3 class="text-xl font-bold text-gray-900">Which generator brands do you service?</h3>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">We service all major generator brands including Cummins, Caterpillar, Perkins, FG Wilson, Volvo Penta, Kohler, Generac, and more. Our technicians are trained on multiple platforms and have extensive experience with both diesel and natural gas generators ranging from 50 kVA to 250 kVA.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition" onclick="toggleAccordion(this)">
+                        <h3 class="text-xl font-bold text-gray-900">What are the benefits of an AMC contract?</h3>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="text-gray-600">Annual Maintenance Contracts (AMC) provide scheduled preventive maintenance, priority emergency support, discounted parts and labor rates, detailed performance reports, and extended equipment life. AMC customers receive faster response times and reduced downtime, making it a cost-effective solution for businesses relying on continuous power.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-gradient-to-br from-purple-600 to-blue-600">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-200 font-bold text-sm uppercase tracking-wider">Testimonials</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-white mb-6 mt-2">
+                    What Our Clients Say
+                </h2>
+                <p class="text-xl text-purple-100 max-w-3xl mx-auto">
+                    Trusted by businesses across Pakistan
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Excellent service and very professional. Our 150 kVA generator has been running flawlessly since installation. 
+                        The team is responsive and knowledgeable. Highly recommend for industrial generator needs."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Ahmed Malik</p>
+                            <p class="text-sm text-gray-500">Factory Manager, Textile Industry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Quick response time and expert troubleshooting. They diagnosed and fixed our AVR issue within hours. 
+                        Their AMC package has saved us from multiple downtime situations. True professionals!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Dr. Fatima Khan</p>
+                            <p class="text-sm text-gray-500">Hospital Administrator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Been using their services for 3 years. Reliable, honest, and fair pricing. They maintain our 200 kVA 
+                        generator and never miss a scheduled service. Best generator service provider in Lahore."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Rashid Hussain</p>
+                            <p class="text-sm text-gray-500">IT Manager, Data Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">Coverage</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 mt-2">
+                    Service Areas in Pakistan
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Providing generator services across major cities and industrial zones
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Lahore</h3>
+                    <p class="text-gray-600">Complete coverage across all areas</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Faisalabad</h3>
+                    <p class="text-gray-600">Industrial zone services</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Sialkot</h3>
+                    <p class="text-gray-600">Export industry support</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Gujranwala</h3>
+                    <p class="text-gray-600">Manufacturing sector coverage</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gradient-to-br from-purple-100 to-blue-100 rounded-3xl p-8 text-center">
+                <p class="text-lg text-gray-700 mb-4">
+                    <i class="fas fa-truck text-purple-600 mr-2"></i>
+                    <strong>Open to relocation for major projects</strong> - We provide on-site services anywhere in Punjab
+                </p>
+                <a href="#contact" class="inline-flex items-center text-purple-600 font-bold hover:text-purple-700">
+                    Inquire about service in your area <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="text-4xl lg:text-6xl font-black mb-6">
+                    Ready to Ensure Reliable Power?
+                </h2>
+                <p class="text-xl mb-8 text-purple-100">
+                    Get in touch with our expert team for a free consultation and quote
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="bg-white text-purple-600 px-10 py-5 rounded-full font-bold text-lg inline-flex items-center hover:shadow-2xl transition">
+                        Get Free Quote <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="tel:+923044282752" class="bg-purple-800 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center hover:bg-purple-900 transition">
+                        <i class="fas fa-phone mr-2"></i> Call: +92 304 4282752
+                    </a>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <i class="fas fa-headset text-4xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">24/7 Support</h4>
+                        <p class="text-purple-100">Round-the-clock emergency assistance</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <i class="fas fa-certificate text-4xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Certified Service</h4>
+                        <p class="text-purple-100">Trained and qualified technicians</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <i class="fas fa-handshake text-4xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Fair Pricing</h4>
+                        <p class="text-purple-100">Transparent quotes with no hidden costs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">Contact Us</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 mt-2">
+                    Get in Touch
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Have questions or need a service? Our team is ready to help
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Phone</h4>
+                                    <a href="tel:+923044282752" class="text-purple-600 hover:text-purple-700 font-semibold text-lg">
+                                        +92 304 4282752
+                                    </a>
+                                    <p class="text-sm text-gray-500 mt-1">24/7 Emergency Line</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Email</h4>
+                                    <a href="mailto:info@elitepowersolutions.pk" class="text-purple-600 hover:text-purple-700 font-semibold">
+                                        info@elitepowersolutions.pk
+                                    </a>
+                                    <p class="text-sm text-gray-500 mt-1">Response within 2 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Location</h4>
+                                    <p class="text-gray-600">Lahore, Punjab</p>
+                                    <p class="text-sm text-gray-500 mt-1">Pakistan</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Business Hours</h4>
+                                    <p class="text-gray-600">Mon - Sat: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-sm text-gray-500 mt-1">Emergency: 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6">
+                        <h4 class="font-bold text-gray-900 mb-3">Quick Response Guarantee</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Email response within 2 hours
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Emergency on-site within 4 hours
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Free consultation & assessment
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Request a Service or Quote</h3>
+                    
+                    <form class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Your Name *</label>
+                                <input type="text" 
+                                       class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                       placeholder="Enter your full name"
+                                       required>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Company Name</label>
+                                <input type="text" 
+                                       class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                       placeholder="Your company name">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                                <input type="email" 
+                                       class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                       placeholder="your.email@example.com"
+                                       required>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                                <input type="tel" 
+                                       class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                       placeholder="+92 300 0000000"
+                                       required>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Service Type *</label>
+                                <select class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition" required>
+                                    <option value="">Select Service</option>
+                                    <option>Generator Installation</option>
+                                    <option>Maintenance & Repair</option>
+                                    <option>AVR Configuration</option>
+                                    <option>Emergency Repair</option>
+                                    <option>AMC Contract</option>
+                                    <option>Consultation</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Generator Capacity</label>
+                                <select class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition">
+                                    <option value="">Select Capacity</option>
+                                    <option>50-100 kVA</option>
+                                    <option>100-175 kVA</option>
+                                    <option>175-250 kVA</option>
+                                    <option>Not sure / Need consultation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message *</label>
+                            <textarea rows="5" 
+                                      class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                      placeholder="Please describe your requirements or issue in detail..."
+                                      required></textarea>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="urgent" class="mt-1 w-5 h-5 text-purple-600">
+                            <label for="urgent" class="text-gray-600">
+                                <strong>This is an urgent request</strong> - Need immediate attention
+                            </label>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full btn-primary text-white px-8 py-5 rounded-xl font-bold text-lg">
+                            Submit Request <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+
+                        <p class="text-sm text-gray-500 text-center">
+                            By submitting this form, you agree to our terms and conditions. 
+                            We'll contact you within 2 hours during business hours.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center">
+                            <i class="fas fa-bolt text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Elite Power Solutions</h3>
+                            <p class="text-sm text-gray-400">Since 2009</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Leading generator service provider in Lahore, Pakistan. Specializing in installation, 
+                        maintenance, and repair of 50-250 kVA generators with 15+ years of expertise.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-award text-purple-400"></i>
+                            <span class="text-sm">Certified</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-shield-alt text-purple-400"></i>
+                            <span class="text-sm">Licensed</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-user-check text-purple-400"></i>
+                            <span class="text-sm">Experienced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-purple-400 transition">Our Services</a></li>
+                        <li><a href="#industries" class="text-gray-400 hover:text-purple-400 transition">Industries</a></li>
+                        <li><a href="#generators" class="text-gray-400 hover:text-purple-400 transition">Generator Range</a></li>
+                        <li><a href="#why-us" class="text-gray-400 hover:text-purple-400 transition">Why Choose Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Generator Installation</li>
+                        <li>Maintenance & Repair</li>
+                        <li>AVR Configuration</li>
+                        <li>Electrical Wiring</li>
+                        <li>AMC Contracts</li>
+                        <li>Load Testing</li>
+                        <li>Emergency Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <div class="text-gray-400 text-sm">
+                        <p>&copy; 2024 Elite Power Solutions. All rights reserved.</p>
+                        <p class="mt-2">Professional Generator Services in Lahore & Pakistan</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 md:justify-end">
+                        <a href="tel:+923044282752" class="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition">
+                            <i class="fas fa-phone"></i>
+                            <span>+92 304 4282752</span>
+                        </a>
+                        <a href="mailto:info@elitepowersolutions.pk" class="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@elitepowersolutions.pk</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right, .animate-scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Accordion functionality
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current accordion
+            content.classList.toggle('active');
+            icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.lg\\:hidden button')?.addEventListener('click', function() {
+            alert('Mobile menu would open here. Implement a slide-out menu for production.');
+        });
+    </script>
+</body>
+</html>
